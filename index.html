@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Documentation</title>
+    <meta name="description" content="API documentation">
+    <meta name="author" content="Laurens Le Jeune">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body class="container-fluid" id="container" style="width: 80%">
+    <div>
+        <h1>Hasher API</h1>
+        <p>
+              The Hasher API allows for easy hashing of input values into hashvalues using a preferred hashing algorithm.
+        </p>
+    </div>
+    <div>
+        <h2>Available hashing algorithms</h2>
+        <p>
+          The used hashing algorithm heavily influences the generation of the hashvalue. By sending a GET request to 
+          <a href="../hash/algorithms">../hash/algorithms</a>, a list of all the available hashing algorithms is returned.
+        </p>
+    </div>
+    <div>
+        <h2>Hashing a input value</h2>
+        <p>
+          The main function of this API is to generate hashvalues for given input values. This should be done corresponding to the following url:
+        </p>
+        <p>
+            <a href="../hash/sha256/input">../hash/algorithm/input</a>
+        </p>
+        <p>
+            The above url will give an example response for the sha256 algorithm and an input value of "input". The output provided gives the chosen algorithm, the input value and the output value.
+            Once again the required HTTP request is a GET request.
+        </p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
