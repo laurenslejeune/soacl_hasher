@@ -1,4 +1,4 @@
-//Load express module with `require` directive
+//Load modules with `require` directive
 var express = require('express');
 var app = express();
 var cors = require('cors')
@@ -8,7 +8,7 @@ var path = require('path');
 //Dealing with CORS:
 app.use(cors())
 
-
+//Transform an input to a hash
 function inputToHash(algorithm,input)
 {
   //By taking random numbers, ensure that the hash value cannot be cracked (for example by sending inputs until the same value has been reached).
@@ -20,16 +20,15 @@ function inputToHash(algorithm,input)
 app.get('/', function (req, res) 
 {
   res.redirect('./documentation');
-  //res.send('Hello World!')
 })
 
+//Show documentation
 app.get('/documentation', function (req, res) 
 {
   res.sendFile(path.join(__dirname + '/index.html'));
-  //res.send('Hello World!')
 })
 
-
+//Apply hashing
 app.get('/hash/:algorithm/:value', function (req, res) 
 {
   let input = req.params.value;
@@ -45,6 +44,7 @@ app.get('/hash/:algorithm/:value', function (req, res)
   }
 })
 
+//Show possible algorithms
 app.get('/hash/algorithms', function (req, res) 
 {
   res.send(crypto.getHashes());
